@@ -1,0 +1,370 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: #edf2f1;
+
+  }
+  
+  .pricing-page {
+    max-width: auto;
+    margin: 20px 20px;
+    padding: 10px;
+  }
+  
+  .title {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .motion {
+    color:#00ba55; 
+    font-size: 100px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+  .cut {
+    color: #294B29; 
+    font-size: 100px;
+    font-weight: 700;
+    margin: 0 20px;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+  .quote {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    color: #040404;
+    font-size: 30px; 
+    margin-top: 0px; 
+  }
+  
+  @media screen and (max-width: 800px) {
+    .motion, .cut {
+        font-size: 80px;
+    }
+    .quote {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+  .motion, .cut {
+      font-size: 60px;
+      }
+  .quote {
+      font-size: 20px;
+  }
+}
+
+
+
+  .button-line {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    margin-top: 10px;
+  }
+  
+  
+  .button-line button {
+    padding: 15px 30px;
+    background-color: #80BCBD;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+  
+  @media screen and (max-width: 800px) {
+    .button-line {
+        flex-direction: column; 
+        align-items: center;
+        text-align: center;
+    }
+    
+    .button-line button {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    
+    .country-select {
+        margin-bottom: 20px;
+    }
+}
+
+.country-select select {
+    padding: 10px 20px;
+    background-color: #BFD8AF;
+    color: #005050;
+    border: none;
+    border-radius: 500px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 700;
+  }
+  .lebel-text{
+    font-size: 25px;
+    font-weight: 700;
+    color: #085d5d;
+  }
+
+.payment-option {
+    display: flex;
+    align-items: center;
+    margin-right: 0px;
+    margin-top: 10px; 
+  }
+  
+  .toggle-label {
+    margin:0px 8px;
+    font-size: 25px;
+    font-weight: 700;
+    color: #125454;
+  }
+  
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 34px;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: rgb(173, 236, 190);
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+  }
+  
+  input:checked + .slider {
+    background-color: #304D30;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+
+.pricing-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+  gap: 60px;
+  justify-content: space-evenly;
+  
+}
+
+.pricing-option hr {
+  border: none;
+  border-top: 2px solid #9f9292;
+  margin: 20px 0;
+}
+
+.pricing-option {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: auto;
+  padding: 20px;
+  height: auto;
+  background-color: #ffffff;
+  border-radius: 10px;
+  text-align: center;
+}
+
+@media screen and (min-width: 1350px) {
+  .pricing-options {
+     justify-content: center;
+      grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (max-width: 1350px) {
+  .pricing-options {
+    grid-template-columns: repeat(2,.5fr);
+    margin-left: 150px;
+    margin-right:150px ;
+  }
+
+  .pricing-option {
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .pricing-options {
+    grid-template-columns: repeat(2,.5fr);
+    margin-left: 40px;
+    margin-right:40px ;
+  }
+
+  .pricing-option {
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .pricing-options {
+    grid-template-columns: .8fr;
+    margin-left: 70px;
+    margin-right:70px;
+  }
+  .pricing-option {
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .pricing-options {
+    grid-template-columns: .8fr;
+    margin-left: 20px;
+    margin-right:20px;
+  }
+  .pricing-option {
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .pricing-options {
+    grid-template-columns: .8fr;
+    margin-left: 0px;
+    margin-right:0px;
+  }
+  .pricing-option {
+    width: auto;
+  }
+}
+
+.pricing-option ul {
+  font-size: 25px;
+  padding-left: 20px;
+  background-color: #ffffff;
+}
+
+.pricing-option ul li {
+  margin-bottom: 5px;
+  background-color: #ffffff;
+}
+
+.pricing-option h2 {
+  color: #294B29;
+  font-size: 28px;
+  background-color: #ffffff;
+  letter-spacing: 2px;
+}
+
+.pricing-option p {
+  font-weight: bold;
+  margin-top: 50px;
+  margin-bottom: 0px;
+  padding: 0px;
+  font-size: 24px;
+  background-color: #ffffff;
+  letter-spacing: 1px;
+}
+
+.pricing-option ul {
+  text-align: center;
+ 
+}
+
+.pricing-option li {
+  list-style-type:disc;
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.pay-button {
+  background-color: #004225;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 50px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+  height: 200px;
+}
+.contact-button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #016A70;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 900;
+  text-decoration: none;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.contact-button:hover {
+  background-color: #45a049;
+  transform: translateY(-2px);
+}
+
+
+.contact-button::before {
+  content: ''; /* Add pseudo-element for hover effect */
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
+  top: 50%;
+  left: 50%;
+  border-radius: 50%; /* Circle shape */
+  transform: translate(-50%, -50%) scale(0); /* Initial scale */
+  transition: transform 0.4s ease; /* Transition */
+}
+
+.contact-button:hover::before {
+  transform: translate(-50%, -50%) scale(2); /* Scale up on hover */
+}
+
+
+.shadow {
+  box-shadow: 4px 8px 16px rgba(8, 81, 1, 0.8); /* Adjust shadow properties as needed */
+}
